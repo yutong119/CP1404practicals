@@ -6,23 +6,25 @@ def main():
     choice = input(">>> ").upper()
     while choice != "Q":
         if choice == "C":
-            convent_celsius_to_fahrenheit()
+            fahrenheit = float(input("Fahrenheit: "))
+            celsius = convent_celsius_to_fahrenheit(fahrenheit)
+            print(f"Result: {celsius:.2f} C")
         elif choice == "F":
-            convent_fahrenheit_to_celsius()
+            celsius = float(input("Celsius: "))
+            fahrenheit = convent_fahrenheit_to_celsius(celsius)
+            print(f"Result: {fahrenheit:.2f} F")
         else:
             print("Invalid option")
         print(MENU)
         choice = input(">>> ").upper()
     print("Thank you.")
 
-def convent_fahrenheit_to_celsius():
-    fahrenheit = float(input("Fahrenheit: "))
+def convent_fahrenheit_to_celsius(fahrenheit):
     celsius = 5 / 9 * (fahrenheit - 32)
-    print(f"Result: {celsius:.2f} C")
+    return celsius
 
-def convent_celsius_to_fahrenheit():
-    celsius = float(input("Celsius: "))
+def convent_celsius_to_fahrenheit(celsius):
     fahrenheit = celsius * 9.0 / 5 + 32
-    print(f"Result: {fahrenheit:.2f} F")
+    return fahrenheit
 
 main()
