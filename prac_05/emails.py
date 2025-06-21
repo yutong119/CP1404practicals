@@ -7,10 +7,10 @@ email_to_name = {}
 email = input("Email: ")
 while email != "":
     guessed_name = email.split('@')[0]
-    choice = input(f"Is your name {user_name}? (Y/n)")
+    choice = input(f"Is your name {guessed_name}? (Y/n)")
     if choice == "Y" or choice == "":
-        email = input("Email: ")
+        email_to_name[email] = guessed_name
     else:
         user_name = input("Name: ")
-        email = input("Email: ")
+        email_to_name[email] = guessed_name
 print(email_to_name)
