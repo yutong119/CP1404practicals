@@ -28,3 +28,4 @@ def get_valid_name(email, guessed_name):
         user_name = input("Name: ")
         return user_name
 
+main()
