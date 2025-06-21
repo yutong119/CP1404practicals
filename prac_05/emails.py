@@ -1,7 +1,7 @@
 """
 emails
 Estimate: 25 minutes
-Actual:    minutes
+Actual:   40 minutes
 """
 def main():
     email_to_name = {}
