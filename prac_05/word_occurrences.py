@@ -1,7 +1,7 @@
 """
 Word Occurrences
 Estimate: 25 minutes
-Actual:    minutes
+Actual:   35 minutes
 """
 text = input("Text: ")
 words = text.split()
