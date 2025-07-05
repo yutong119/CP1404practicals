@@ -13,3 +13,11 @@ expected_age_another = 9
 actual_age_another = another_guitar.get_age()
 print(f"Another Guitar get_age() - Expected {expected_age_another}. Got {actual_age_another}")
 
+# Test the is vintage method
+expected_vintage_gibson = True
+actual_vintage_gibson = gibson.is_vintage()
+print(f"Gibson L-5 CES is_vintage() - Expected {expected_vintage_gibson}. Got {actual_vintage_gibson}")
+
+expected_vintage_another = False
+actual_vintage_another = another_guitar.is_vintage()
+print(f"Another Guitar is_vintage() - Expected {expected_vintage_another}. Got {actual_vintage_another}")
