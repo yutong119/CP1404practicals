@@ -1,6 +1,6 @@
 """
-Estimate time: 30min
-Actual time:
+Estimate time: 20min
+Actual time: 20min
 """
 class Guitar:
     def __init__(self, name="", year=0, cost=0):

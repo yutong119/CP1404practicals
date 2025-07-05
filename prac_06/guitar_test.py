@@ -1,4 +1,9 @@
 """Test that the last two methods(get_age, is_vintage) work as expected."""
+"""
+Estimate time: 20min
+Actual time: 20min
+"""
+
 from prac_06.guitar import Guitar
 
 gibson = Guitar("Gibson L-5 CES", 1925, 100)
