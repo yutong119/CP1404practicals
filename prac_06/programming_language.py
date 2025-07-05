@@ -2,6 +2,8 @@
 Estimate time: 20min
 Actual time:
 """
+from docutils.nodes import reference
+
 class ProgrammingLanguage:
     """ """
     def __init__(self, name="", typing="", reflection=False, year=0):
@@ -14,5 +16,5 @@ class ProgrammingLanguage:
         return self.typing.lower() == "dynamic"
 
     def __str__(self):
-        return f"{name}, "
+        return f"{self.name}, {self.typing} Typing, Reflection={self.reflection}, First appeared in {self.year} "
 
