@@ -15,7 +15,11 @@ while name != "":
     print(f"{Guitar(name, year, cost)} added.")
     name = input("Name: ")
 
+print("These are my guitars:")
+for i, guitar in enumerate(guitars, 1):
+    # do something with i (the index) and guitar (the element)
 
+    print(f"Guitar {i}: {guitar.name:>20} ({guitar.year}), worth ${guitar.cost:10,.2f}{vintage_string}")
 
 
 
