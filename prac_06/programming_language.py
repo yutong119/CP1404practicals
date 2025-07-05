@@ -1,10 +1,18 @@
+"""
+Estimate time: 20min
+Actual time:
+"""
 class ProgrammingLanguage:
     """ """
-    def __init__(self, name="", typing, reflection, year):
+    def __init__(self, name="", typing="", reflection=False, year=0):
         self.name = name
         self.typing = typing
         self.reflection = reflection
-        self. year = year
+        self.year = year
 
     def is_dynamic(self):
+        return self.typing.lower() == "dynamic"
+
+    def __str__(self):
+        return f"{name}, "
 
