@@ -21,3 +21,4 @@ for word in words_counts:
 for word in sorted(words_counts.keys()):
     print(f"{word:{max_length}} = {words_counts[word]}")
 
+print(f"{i+1}. {status_display}{title} - {year} ({category})")
