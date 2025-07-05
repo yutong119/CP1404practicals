@@ -8,6 +8,7 @@ from prac_06.guitar import Guitar
 
 gibson = Guitar("Gibson L-5 CES", 1925, 100)
 another_guitar = Guitar("Another Guitar", 2013, 900)
+# if want to get 9, need to change 2013 to 2016, the get_age function has no problem
 
 # Test the get age method
 expected_age_gibson = 100
