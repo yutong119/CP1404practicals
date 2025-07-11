@@ -10,3 +10,6 @@ def main():
         guitar = Guitar(parts[0], year, cost)
         guitars.append(guitar)
     in_file.close()
+
+    for guitar in guitars:
+        print(guitar)
