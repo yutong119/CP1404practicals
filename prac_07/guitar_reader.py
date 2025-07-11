@@ -16,5 +16,17 @@ def main():
     for guitar in guitars:
         print(guitar)
 
+def get_new_guitar():
+    new_name = input("Enter a new guitar: ")
+    while new_name != "":
+        new_year = int(input("Enter the year of guitar: "))
+        nuw_cost = float(input("Enter the cost of guitar: "))
+        return Guitar(new_name, new_year, nuw_cost)
+
+def save_new_guitars()
+
+
+main()
+
 
 
