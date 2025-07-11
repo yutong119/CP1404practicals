@@ -1,5 +1,19 @@
 from prac_07.guitar import Guitar
 
+def main():
+    guitars = load_guitar_data()
+    new_guitar = get_new_guitar()
+
+    if new_guitar is not None:
+        guitars.append(new_guitar)
+
+    guitars.sort()
+
+    save_new_guitars(guitars)
+
+    for guitar in guitars:
+        print(guitar)
+
 def load_guitar_data():
     guitars = []
     in_file = open('guitars.csv', 'r')
