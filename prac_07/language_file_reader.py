@@ -27,13 +27,12 @@ def main():
         # Reflection is stored as a string (Yes/No) and we want a Boolean
         reflection = parts[2] == "Yes"
         # Point_arithmetic is stored as a string (Yes/No) and we want a Boolean
-        pointer_arithmetic = parts[4] == "Yes"  # 新增转换
+        pointer_arithmetic = parts[4] == "Yes"
         # Construct a ProgrammingLanguage object using the elements
         # year should be an int
-        language1 = ProgrammingLanguage(parts[0], parts[1], reflection, int(parts[3]),pointer_arithmetic)
-        language2 = ProgrammingLanguage(parts[0], parts[1], reflection, int(parts[3]), pointer_arithmetic)
+        language = ProgrammingLanguage(parts[0], parts[1], reflection, int(parts[3]),pointer_arithmetic)
         # Add the language we've just constructed to the list
-        languages.append(language1 and language2)
+        languages.append(language)
     # Close the file as soon as we've finished reading it
     in_file.close()
 
