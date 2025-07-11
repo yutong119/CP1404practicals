@@ -1,6 +1,6 @@
 from prac_07.guitar import Guitar
 
-def main():
+def load_guitar_data():
     guitars = []
     in_file = open('guitars.csv', 'r')
     for line in in_file:
@@ -10,11 +10,7 @@ def main():
         guitar = Guitar(parts[0], year, cost)
         guitars.append(guitar)
     in_file.close()
-
-    guitars.sort()
-
-    for guitar in guitars:
-        print(guitar)
+    return guitars
 
 def get_new_guitar():
     new_name = input("Enter a new guitar: ")
