@@ -31,7 +31,7 @@ def run_tests():
     visual_basic = ProgrammingLanguage("Visual Basic", "Static", False, 1991, False)
     c = ProgrammingLanguage("C", "Static", False, 1972, True)
 
-    languages = [ruby, python, visual_basic]
+    languages = [ruby, python, visual_basic, c]
     print(python)
 
     print("The dynamically typed languages are:")
