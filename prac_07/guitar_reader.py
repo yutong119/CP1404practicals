@@ -23,8 +23,10 @@ def get_new_guitar():
         nuw_cost = float(input("Enter the cost of guitar: "))
         return Guitar(new_name, new_year, nuw_cost)
 
-def save_new_guitars()
-
+def save_new_guitars(guitars):
+    with open('guitars.csv', 'w') as out_file:
+        for guitar in guitars:
+            out_file.write(f"{guitar.name}, {guitar.year}, {guitar.cost}")
 
 main()
 
