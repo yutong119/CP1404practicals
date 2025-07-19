@@ -2,6 +2,7 @@ from kivy.app import App
 from kivy.lang import Builder
 from kivy.properties import StringProperty
 
+MILES_TO_KM = 1.60934
 
 class ConvertMilesKmApp(App):
     output_message = StringProperty
@@ -21,6 +22,15 @@ class ConvertMilesKmApp(App):
             return value
         except ValueError:
             return 0
+
+    def calculate_data(self):
+        """ handle calculation (could be button press or other call), output result to label widget """
+        value = self.get_valid_input()
+        result = value * MILES_TO_KM
+        self.root.ids.output_label.text = str(result)
+
+
+
 
 
 
