@@ -19,3 +19,4 @@ class DynamicLabelsApp(App):
 
         return self.root
 
+DynamicLabelsApp().run()
