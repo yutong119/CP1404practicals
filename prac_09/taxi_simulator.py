@@ -9,7 +9,7 @@ def main():
              SilverServiceTaxi("Hummer", 200, 4)]
 
     current_taxi = None
-    total_bill = 0.0
+    total_bill = 0.00
 
     print("Let's drive!")
     print(MENU)
@@ -31,12 +31,12 @@ def main():
                 distance = float(input("Drive how far? "))
                 current_taxi.drive(distance)
                 trip_cost = current_taxi.get_fare()
-                print(f"Your {current_taxi.name} trip cost you ${trip_cost:.2f}")
+                print(f"Your {current_taxi.name} trip cost you ${trip_cost}")
                 total_bill += trip_cost
                 print(f"Bill to date: ${total_bill}")
                 choice = get_valid_choice()
             else:
-                print("You need to choose a taxi before you can drive")\
+                print("You need to choose a taxi before you can drive")
                 print(f"Bill to date: ${total_bill}")
                 choice = get_valid_choice()
 
