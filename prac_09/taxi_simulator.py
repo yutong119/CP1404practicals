@@ -24,6 +24,7 @@ def main():
                 current_taxi = taxis[taxi_choice]
             else:
                 print("Invalid taxi choice")
+            choice = get_valid_choice()
 
         elif choice == 'd':
             if current_taxi:
@@ -32,17 +33,17 @@ def main():
                 trip_cost = current_taxi.get_fare()
                 print(f"Your {current_taxi.name} trip cost you ${trip_cost:.2f}")
                 total_bill += trip_cost
+                print(f"Bill to date: ${total_bill}")
+                choice = get_valid_choice()
             else:
                 print("You need to choose a taxi before you can drive")\
-                print(f"Bill to date: ${total_bill:.2f}")
+                print(f"Bill to date: ${total_bill}")
                 choice = get_valid_choice()
 
-
-    print(f"Total trip cost: ${total_bill:.2f}")
+    print(f"Total trip cost: ${total_bill}")
     print("Taxis are now:")
     for taxi in taxis:
         print(taxi)
-
 
 def get_valid_choice():
     choice = input(">>>")
