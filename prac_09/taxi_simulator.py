@@ -16,6 +16,11 @@ def main():
             print(f"Taxis available:")
             for i, taxi in enumerate(taxis):
                 print(f"{i} - {taxi}")
+            taxi_choice = int(input("Choose taxi: "))
+            if 0 <= taxi_choice < len(taxis):
+                current_taxi = taxis[taxi_choice]
+            else:
+                print("Invalid taxi choice")
 
         elif choice == 'd':
 
