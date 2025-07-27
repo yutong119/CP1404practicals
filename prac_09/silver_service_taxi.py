@@ -4,9 +4,9 @@ class SilverServiceTaxi(Taxi):
     """"""
     flagfall = 4.50
 
-    def __init__(self, kwargs, fanciness):
+    def __init__(self, name, fuel, fanciness):
         """Initialize name, fuel, fanciness"""
-        super().__init__(**kwargs)
+        super().__init__(name, fuel)
         self.fanciness = float(fanciness)
         #set price_per_km
         self.price_per_km = Taxi.price_per_km * fanciness
