@@ -14,6 +14,8 @@ def main():
     while choice != 'q':
         if choice == 'c':
             print(f"Taxis available:")
+            for i, taxi in enumerate(taxis):
+                print(f"{i} - {taxi}")
 
         elif choice == 'd':
 
