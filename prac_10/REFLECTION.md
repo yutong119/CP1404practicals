@@ -35,19 +35,24 @@ For each one, write a short explanation of what was good about your review.
 
 ### Good Code Review 1
 
-[]()
+Sort class use key= attrgetter("priority") rather than key=lambda x: x.priority
 
 ### Explanation
 
-...
+attrgetter can directly obtain object properties through property names, avoiding the need to manually write lambda functions or customize access logic
 
 ### Good Code Review 2
 
-[]()
+guitar = Guitar(parts[0], int(parts[1]), float(parts[2]))  
+
+parts = line.strip().split(',')
+        year = int(parts[1])
+        cost = float(parts[2])
+        guitar = Guitar(parts[0], year, cost)
 
 ### Explanation
 
-...
+Avoid repetition to make the code more concise
 
 ## Practicals
 
