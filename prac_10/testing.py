@@ -53,6 +53,20 @@ def run_tests():
     car = Car()
     assert car.fuel == 20
 
+    def format_phrase(phrase):
+        """
+        Format a phrase as a sentence - starting with a capital and ending with a single full stop.
+        >>> format_phrase('hello')
+        'Hello.'
+        >>> format_phrase('It is an ex parrot.')
+        'It is an ex parrot.'
+        >>> format_phrase('cp1404 finished')
+        'Cp1404 finished.'
+        """
+        phrase = phrase.capitalize()
+        if not phrase.endswith('.'):
+            phrase += '.'
+        return phrase
 
 
 run_tests()
