@@ -122,7 +122,12 @@
 
 #--------------------------------------------------------------------------------------
 """11. check how many Uppercase you have, use for loop , is_uppercase? """
-
+# text = "none Two over"
+# count = 0
+# for i in text:
+#     if i.isupper():
+#         count += 1
+# print(count)
 #--------------------------------------------------------------------------------------
 """12 module import
 直接导入整个模块
@@ -155,17 +160,52 @@ print(square_root(16))  # 用别名代替功能名
 # print(secret)
 #--------------------------------------------------------------------------------------
 """13"""
-s = "I am born in 1983, I was 21 last year and turn 31 in 10 years time. I have a sister"
-sentences = sorted(s.split())
-print(sentences)
-strings = [word for word in sentences if word.isalpha()]
-numbers = [word for word in sentences if word.isdigit()]
-length_of_words = [word for word in sentences if len(word) > 4]
-
-print(strings)
-print(numbers)
-print(length_of_words)
+# s = "I am born in 1983, I was 21 last year and turn 31 in 10 years time. I have a sister"
+# sentences = sorted(s.split())
+# print(sentences)
+# strings = [word for word in sentences if word.isalpha()]
+# numbers = [word for word in sentences if word.isdigit()]
+# length_of_words = [word for word in sentences if len(word) > 4]
+#
+# print(strings)
+# print(numbers)
+# print(length_of_words)
 
 #--------------------------------------------------------------------------------------
 """14 """
+# number = int(input("Enter number:"))
+# while number < 0:
+#     print("Invalid Input")
+#     number = int(input("Enter number: "))
+# print()
 
+#--------------------------------------------------------------------------------------
+"""15"""
+def main():
+    text = "?name=Bob&age=99&day=wed"
+    names = process_data(text)
+    print(names)
+
+def process_data(text):
+    if text.startswith('?'):
+        text = text[1:]
+    params = text.split('&')
+    result = []
+    for param in params:
+        name, value = param.split('=') #split('=') 是拆分操作（将字符串按 = 分割为两部分）
+        if value.isdigit():
+            value = int(value)
+        result.append((name, value))
+    return result
+
+main()
+#--------------------------------------------------------------------------------------
+"""list comprehension"""
+# [expression for element in iterable if condition]
+nums = [1, 2, 3, 4, 5]
+squared_nums = [nums * 2 for num in nums]
+print(squared_nums)
+
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+flattened_list = [num for sublist in matrix for num in sublist]
+print(flattened_list)
