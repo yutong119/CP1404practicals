@@ -181,31 +181,69 @@ print(square_root(16))  # 用别名代替功能名
 
 #--------------------------------------------------------------------------------------
 """15"""
-def main():
-    text = "?name=Bob&age=99&day=wed"
-    names = process_data(text)
-    print(names)
+# def main():
+#     text = "?name=Bob&age=99&day=wed"
+#     names = process_data(text)
+#     print(names)
+#
+# def process_data(text):
+#     if text.startswith('?'):
+#         text = text[1:]
+#     params = text.split('&')
+#     result = []
+#     for param in params:
+#         name, value = param.split('=') #split('=') 是拆分操作（将字符串按 = 分割为两部分）
+#         if value.isdigit():
+#             value = int(value)
+#         result.append((name, value))
+#     return result
+#
+# main()
 
-def process_data(text):
-    if text.startswith('?'):
-        text = text[1:]
-    params = text.split('&')
-    result = []
-    for param in params:
-        name, value = param.split('=') #split('=') 是拆分操作（将字符串按 = 分割为两部分）
-        if value.isdigit():
-            value = int(value)
-        result.append((name, value))
-    return result
+# text = "?name=Bob&age=99&day=wed"
+#
+# def process_data(text):
+#     if text.startswith('?'):
+#         text = text[1:]
+#     params = text.split('&')
+#     result = []
+#     for para in params:
+#         name, value = params.split('=')
+#         result.append((name, value))
+#     return result
+#
+# def main():
+#     text = "?name=Bob&age=99&day=wed"
+#     names = process_data(text)
+#     print(names)
 
-main()
+
 #--------------------------------------------------------------------------------------
 """list comprehension"""
-# [expression for element in iterable if condition]
-nums = [1, 2, 3, 4, 5]
-squared_nums = [nums * 2 for num in nums]
-print(squared_nums)
+# # [expression for element in iterable if condition]
+# nums = [1, 2, 3, 4, 5]
+# squared_nums = [nums * 2 for num in nums]
+# print(squared_nums)
+#
+# matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+# flattened_list = [num for sublist in matrix for num in sublist]
+# print(flattened_list)
+#--------------------------------------------------------------------------------------
+"""dictionary"""
+# def create_dictionary(keys, values):
+#     key_to_value = {}
+#     for i in range(len(keys)):
+#         key_to_value[keys[i]]=values[i]
+#     return key_to_value
 
-matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-flattened_list = [num for sublist in matrix for num in sublist]
-print(flattened_list)
+def create_dictionary(keys, values):
+    key_to_value={}
+    for i in range(len(keys)):
+        key_to_value[keys[i]] = values[i]
+    return key_to_value
+
+
+#--------------------------------------------------------------------------------------
+fruits = ['apple', 'banana', 'orange']
+list = list(enumerate(fruits))
+print(list)
