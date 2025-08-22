@@ -123,5 +123,49 @@
 #--------------------------------------------------------------------------------------
 """11. check how many Uppercase you have, use for loop , is_uppercase? """
 
+#--------------------------------------------------------------------------------------
+"""12 module import
+直接导入整个模块
+语法：import 模块名
+使用时需通过 模块名.功能 调用，适合模块功能较多且可能存在命名冲突的情况。
 
+import math
+print(math.sqrt(16))  # 需用模块名作为前缀
+"""
+
+'''
+语法：from 模块名 import 功能名1, 功能名2
+可直接使用导入的功能（无需模块名前缀），适合仅需模块中部分功能的场景。
+
+from math import sqrt, pi
+print(sqrt(16))  # 直接使用函数
+print(pi)        # 直接使用常量
+'''
+
+"""
+import math as m
+print(m.sqrt(16))  # 用别名代替模块名
+
+from math import sqrt as square_root
+print(square_root(16))  # 用别名代替功能名
+"""
+#
+# from random import randint
+# secret = randint(1, 100)
+# print(secret)
+#--------------------------------------------------------------------------------------
+"""13"""
+s = "I am born in 1983, I was 21 last year and turn 31 in 10 years time. I have a sister"
+sentences = sorted(s.split())
+print(sentences)
+strings = [word for word in sentences if word.isalpha()]
+numbers = [word for word in sentences if word.isdigit()]
+length_of_words = [word for word in sentences if len(word) > 4]
+
+print(strings)
+print(numbers)
+print(length_of_words)
+
+#--------------------------------------------------------------------------------------
+"""14 """
 
